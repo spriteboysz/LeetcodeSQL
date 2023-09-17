@@ -18,6 +18,7 @@ insert into Products (product_id, low_fats, recyclable)
 values ('3', 'Y', 'Y');
 insert into Products (product_id, low_fats, recyclable)
 values ('4', 'N', 'N');
+
 select *
 from Products;
 select product_id

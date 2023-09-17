@@ -1,15 +1,13 @@
-create database p0175;
-use p0175;
+create database P0175;
+use P0175;
 show tables;
 
-Create table If Not Exists Person
-(
+Create table If Not Exists Person (
     personId  int,
     firstName varchar(255),
     lastName  varchar(255)
 );
-Create table If Not Exists Address
-(
+Create table If Not Exists Address (
     addressId int,
     personId  int,
     city      varchar(255),
@@ -26,8 +24,8 @@ values ('1', '2', 'New York City', 'New York');
 insert into Address (addressId, personId, city, state)
 values ('2', '3', 'Leetcode', 'California');
 select *
-from person;
+from Person;
 select firstName, lastName, city, state
-from person p
-         left join address a
+from Person p
+         left join Address a
                    on p.personId = a.personId
