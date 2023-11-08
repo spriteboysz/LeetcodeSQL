@@ -6,7 +6,8 @@ show tables;
 create table students (
     stu_num      char(8)     not null primary key,
     stu_name     varchar(20) not null,
-    stu_password varchar(20) not null
+    stu_password varchar(20) not null,
+    class_id int not null
 );
 
 create table grades (
@@ -31,4 +32,19 @@ from students s
          join grade.grades g
          join grade.courses c
               on s.stu_num = g.stu_num and c.cid = g.cid
-where s.stu_num = '20230001' and c.cid = '20231001';
+where s.stu_num = '20230001'
+  and c.cid = '20231001';
+
+create table details (
+    detail_id   int auto_increment primary key,
+    stu_address varchar(100) not null,
+    stu_tel     char(11)     not null,
+    stu_desc    varchar(100),
+    stu_num     char(8)      not null unique
+);
+
+create table classes(
+    class_id int primary key,
+    class_name varchar(20) not null,
+    class_desc varchar(100) not null
+);

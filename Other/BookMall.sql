@@ -55,12 +55,14 @@ select book_id     bookId,
        book_type   bookType
 from books
 where book_id = '202301';
-update books
-set book_name=?,
-    book_author=?,
-    book_cover=?,
-    book_price=?,
-    book_desc=?,
-    book_stock=?,
-    book_type=?
-where book_id=?
+
+
+use bookmall;
+drop table members;
+create table members (
+    member_id     int auto_increment primary key,
+    member_nick   varchar(20) not null,
+    member_gender char(1)     not null,
+    member_age    int         not null,
+    member_city   varchar(10) not null
+);
