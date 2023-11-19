@@ -48,3 +48,5 @@ create table classes(
     class_name varchar(20) not null,
     class_desc varchar(100) not null
 );
+
+select * from students;
