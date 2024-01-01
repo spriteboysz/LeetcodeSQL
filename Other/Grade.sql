@@ -27,7 +27,7 @@ select *
 from students
 where stu_password = '123456';
 
-select s.stu_num sNum, stu_name sName, c.cid, c.cname cName, score
+select s.stu_num sNum, stu_name sName, c.cid, c.cname, cName, score
 from students s
          join grade.grades g
          join grade.courses c
